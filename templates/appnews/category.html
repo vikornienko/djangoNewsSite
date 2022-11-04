@@ -7,18 +7,7 @@
 {% endblock title %}
 
 {% block sidebar %}
-
-    <div class="col-md-4">
-        <div class="list-group">
-            <aside class="navigation">
-                <h4>Names of categories</h4>
-                {% for category in categories %}
-                    <a href="{% url 'category' category.pk %}"
-                       class="list-group-item list-group-item-action">{{ category.title }}</a>
-                {% endfor %}
-            </aside>
-        </div>
-    </div>
+    {% include '_sidebar.html' %}
 {% endblock sidebar %}
 
 {% block content %}
